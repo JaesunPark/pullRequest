@@ -91,7 +91,7 @@
 	box-sizing: border-box;
 }
 
-@mixin ani($motion){
+@mixin ani($motion: test){
 	-webkit-animation: $motion 30s infinite;
 	-moz-animation: $motion 30s infinite;
 	-o-animation: $motion 30s infinite;
