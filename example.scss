@@ -83,12 +83,12 @@
     }
 }
 
-@mixin boxSizing {
-	-webkit-box-sizing: border-box;
-	-moz-box-sizing: border-box;
-	-o-box-sizing: border-box;
-	-ms-box-sizing: border-box;
-	box-sizing: border-box;
+@mixin box($box: border-box) {
+	-webkit-box-sizing: $box;
+	-moz-box-sizing: $box;
+	-o-box-sizing: $box;
+	-ms-box-sizing: $box;
+	box-sizing: $box;
 }
 
 @mixin ani($motion: test, $time: 30s, $repeat: infinite){
