@@ -77,10 +77,6 @@
     &::-moz-placeholder {  /* Firefox 19+ */
         @content;
     }
-
-    &:-ms-input-placeholder {
-        @content;
-    }
 }
 
 @mixin boxSizing {
