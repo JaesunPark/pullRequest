@@ -83,7 +83,7 @@
     }
 }
 
-@mixin boxSizing($box: border-box) {
+@mixin box($box: border-box) {
 	-webkit-box-sizing: $box;
 	-moz-box-sizing: $box;
 	-o-box-sizing: $box;
