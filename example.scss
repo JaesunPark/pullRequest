@@ -90,3 +90,10 @@
 	-ms-box-sizing: border-box;
 	box-sizing: border-box;
 }
+
+@mixin ani($motion){
+	-webkit-animation: $motion 30s infinite;
+	-moz-animation: $motion 30s infinite;
+	-o-animation: $motion 30s infinite;
+	animation: $motion 30s infinite;
+}
