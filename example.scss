@@ -1,5 +1,9 @@
 @charset "UTF-8";
 
+@mixin hello($hello){
+	$hello: "test";
+};
+
 @mixin mediaQuery($point){
 	@if $point == tablet {
 		@media (min-width: 768px){
