@@ -3,6 +3,7 @@
 @mixin hello($hello){
 	$hello: "bbbb";
 	$point: "mobile";
+	$pull: "hello";
 };
 
 @mixin mediaQuery($point){
