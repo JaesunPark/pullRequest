@@ -1,0 +1,98 @@
+@charset "UTF-8";
+
+@mixin hello($hello){
+	$hello: "bbbb";
+	$point: "portrait";
+	$pull: "hello";
+};
+
+@mixin mediaQuery($point){
+	@if $point == tablet {
+		@media (min-width: 768px){
+			@content;
+		};
+	}
+	@else if ($point == mobile){
+		@media (min-width: 320px) and (max-width: 767px){
+			@content;
+		}
+	}
+	@else if ($point == portrait){
+		@media screen and (orientation: portrait){
+			@content;
+		}
+	}
+	@else if ($point == landScape){
+		@media screen and (orientation: landscape){
+			@content;
+		}
+	}
+	@else if $point == landscapeSmall {
+		@media (orientation:landscape) and(max-width: 767px) {
+			@content;
+		}
+	}
+}
+
+@mixin radius($radius: 0){
+	@if ($radius != 0){
+		$radius: $radius + px;
+	}
+
+	-webkit-border-radius: $radius;
+	-moz-border-radius: $radius;
+	-o-border-radius: $radius;
+	border-radius: $radius;
+}
+
+@mixin flex{
+	display: -webkit-box;
+	display: -moz-box;
+	display: -ms-box;
+	display: -webkit-flex;
+	display: flex;
+	-webkit-box-orient: vertical;
+	-moz-box-orient: vertical;
+	-webkit-flex-flow: column;
+	-ms-flex-flow: column;
+	flex-flow:column;
+	-ms-flex: auto;
+	-webkit-flex: auto;
+	flex: auto;
+	-webkit-box-pack:center;
+	-webkit-box-align:center;
+	-moz-box-pack:center;
+	-moz-box-align:center;
+	-ms-flex-pack:center;
+	-ms-flex-align:center;
+	-webkit-justify-content:center;
+	justify-content:center;
+	-webkit-align-items:center;
+	align-items:center;
+}
+
+@mixin placeholder {
+    &::-webkit-input-placeholder {
+        @content;
+    }
+
+    &:-moz-placeholder { /* Firefox 18- */
+        @content;
+    }
+
+    &::-moz-placeholder {  /* Firefox 19+ */
+        @content;
+    }
+
+    &:-ms-input-placeholder {
+        @content;
+    }
+}
+
+@mixin boxSizing {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-o-box-sizing: border-box;
+	-ms-box-sizing: border-box;
+	box-sizing: border-box;
+}
