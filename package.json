@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/JaesunPark/pullRequest/issues"
   },
-  "homepage": "https://github.com/JaesunPark/pullRequest#readme"
+  "homepage": "https://github.com/JaesunPark/pullRequest#readme",
+  "devDependencies": {
+    "gulp-git": "^2.4.2"
+  }
 }
